@@ -26,17 +26,18 @@
     box-sizing: border-box; /* Inclui borda e padding no cálculo do tamanho */
 }
 
-bodi { /* Estiliza o corpo da página */
+body { /* Estiliza o corpo da página */
     font-family: sans-serif; /* Define a fonte padrão */
     background-image: var(--bgGradient); /* Aplica o gradiente dinâmico */
     color: var(--fontColor1); /* Aplica a cor de texto padrão */
-    transition:  color 0.3s ease; /* Transição suave na cor */
+    transition: color 0.3s ease; /* Transição suave na cor */
 }
+
 #main { /* Container principal da página */
     width: 100%; /* Ocupa toda a largura disponível */
 }
 
-.topo { /* Estiliza o cabeçalho */
+#topo { /* Estiliza o cabeçalho (id="topo") */
     background-color: var(--menuColor); /* Cor de fundo dinâmica do menu */
     display: flex; /* Ativa o modelo flexbox */
     align-items: center; /* Alinha os itens verticalmente ao centro */
@@ -74,7 +75,7 @@ bodi { /* Estiliza o corpo da página */
 }
 
 #banner img { /* Imagem do banner principal */
-    width: 100%;    /* Largura total */
+    width: 100%; /* Largura total */
     height: 300px; /* Altura fixa */
     object-fit: cover; /* Cobre o espaço sem distorcer */
 }
@@ -85,7 +86,7 @@ bodi { /* Estiliza o corpo da página */
     gap: 15px; /* Espaço uniforme entre os itens */
 }
 
-.theme{ /* Container do seletor de tema */
+.theme { /* Container do seletor de tema */
     display: inline-flex; /* Flexbox inline */
     align-items: center; /* Alinha ao centro */
 }
@@ -101,7 +102,7 @@ bodi { /* Estiliza o corpo da página */
     margin: 0; /* Remove margens */
 }
 
-#cardis { /* Container da seção de cards */
+#cards { /* Container da seção de cards (id="cards") */
     width: 90%; /* Largura de 90% da tela */
     display: flex; /* Ativa flexbox */
     justify-content: center; /* Centraliza os cards */
@@ -138,7 +139,7 @@ bodi { /* Estiliza o corpo da página */
     margin: 10px auto; /* Centraliza a imagem */
 }
 
-.card buttons { /* Botão dentro do card */
+.card button { /* Botão dentro do card */
     margin-top: 15px; /* Margem superior */
     margin-left: 10px; /* Margem à esquerda */
     width: 80%; /* Largura de 80% */
@@ -156,21 +157,21 @@ bodi { /* Estiliza o corpo da página */
     opacity: 0.85; /* Reduz levemente a opacidade */
 }
 
-.card p { /* Título/parágrafo do card */
+.card h2 { /* Título do card */
     font-size: 16px; /* Tamanho da fonte */
     font-weight: bold; /* Deixa o texto em negrito */
     margin-bottom: 5px; /* Margem inferior */
     color: var(--fontColor1); /* Cor dinâmica */
 }
 
-.card span.texto { /* Descrição secundária do card */
+.card p.texto { /* Descrição secundária do card */
     font-size: 14px; /* Tamanho da fonte */
     color: var(--fontColor2); /* Cor dinâmica secundária */
     display: block; /* Comportamento de bloco */
     margin-bottom: 10px; /* Margem inferior */
 }
 
-foter { /* Rodapé da página */
+footer { /* Rodapé da página */
     text-align: center; /* Centraliza o texto */
     padding: 20px; /* Espaçamento interno */
     margin-top: 20%; /* Distância grande do topo */
@@ -192,6 +193,11 @@ foter { /* Rodapé da página */
     #busca {
         width: 100%; /* Ocupa toda a largura */
         margin: 0; /* Remove margens */
+    }
+
+    #busca-input {
+        width: 100%; /* Faz o input ocupar a largura total no mobile */
+        margin-left: 0; /* Remove a margem fixa de 100px */
     }
 
     #menu {
